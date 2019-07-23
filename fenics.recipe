@@ -1,0 +1,9 @@
+Bootstrap: docker
+From: ubuntu:18.04
+
+%post
+    apt-get -y update && apt-get -y install curl python3 python3-dev python3-pip python3-tk python3-venv && pip3 install numpy scipy matplotlib pandas ffmpeg-python && apt-get install software-properties-common && add-apt-repository ppa:fenics-packages/fenics && apt-get -y update && apt-get install --no-install-recommends fenics
+    ldconfig
+
+%runscript
+    exec /bin/bash -i
