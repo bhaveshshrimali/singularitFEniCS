@@ -2,7 +2,7 @@ Bootstrap: docker
 From: ubuntu:18.04
 
 %post
-    apt-get -y update && apt-get -y install curl python3 python3-pip python3-tk && pip3 install numpy scipy matplotlib pandas ffmpeg-python && apt-get install software-properties-common && add-apt-repository ppa:fenics-packages/fenics && apt-get -y update && apt-get install --no-install-recommends fenics
+    apt-get -y update && apt-get -y install ffmpeg curl python3 python3-pip python3-tk && pip3 install numpy scipy matplotlib pandas ffmpeg-python && apt-get install software-properties-common && add-apt-repository ppa:fenics-packages/fenics && apt-get -y update && apt-get install --no-install-recommends fenics
     ldconfig
 
 %runscript
