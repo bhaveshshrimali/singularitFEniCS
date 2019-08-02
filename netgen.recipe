@@ -3,10 +3,10 @@ From: ubuntu:18.04
 
 %post
 apt-get -y update
-apt-get -y install software-properties-common ffmpeg ngsolve curl build-essential python3 python3-pip python3-tk
+apt-get -y install software-properties-common ffmpeg curl build-essential python3 python3-pip python3-tk
 apt-get update
 pip3 install numpy scipy matplotlib pandas ffmpeg-python
-add-apt-repository universe && add-apt-repository ppa:ngsolve/ngsolve && apt-get install ngsolve && add-apt-repository ppa:fenics-packages/fenics && apt-get -y update && apt-get install --no-install-recommends fenics
+add-apt-repository universe && add-apt-repository ppa:ngsolve/ngsolve && apt-get update && apt-get install ngsolve && add-apt-repository ppa:fenics-packages/fenics && apt-get -y update && apt-get install --no-install-recommends fenics
 ldconfig
 
 %runscript
