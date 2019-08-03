@@ -9,10 +9,10 @@ From: ubuntu:18.04
     apt-add-repository universe
     add-apt-repository ppa:ngsolve/ngsolve
     apt-get -y update
-    apt-get install ngsolve
+    apt-get -y install ngsolve
     add-apt-repository ppa:fenics-packages/fenics
     apt-get -y update
-    apt-get install --no-install-recommends fenics
+    apt-get -y install --no-install-recommends fenics
     ldconfig
 
 %runscript
