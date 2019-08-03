@@ -1,0 +1,19 @@
+Bootstrap: docker
+From: quay.io/fenicsproject/stable:current
+
+%post
+    apt-get -y update
+    apt-get -y install software-properties-common ffmpeg curl build-essential python3 python3-pip python3-tk
+    apt-get -y update
+    pip3 install numpy scipy matplotlib pandas ffmpeg-python
+    apt-add-repository universe
+    add-apt-repository ppa:ngsolve/ngsolve
+    apt-get -y update
+    apt-get -y install ngsolve
+    add-apt-repository ppa:fenics-packages/fenics
+    apt-get -y update
+    apt-get -y install --no-install-recommends fenics
+    ldconfig
+
+%runscript
+    exec /bin/bash -i
