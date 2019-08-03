@@ -10,9 +10,6 @@ From: quay.io/fenicsproject/stable:current
     add-apt-repository ppa:ngsolve/ngsolve
     apt-get -y update
     apt-get -y install ngsolve
-    add-apt-repository ppa:fenics-packages/fenics
-    apt-get -y update
-    apt-get -y install --no-install-recommends fenics
     ldconfig
 
 %runscript
