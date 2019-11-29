@@ -1,5 +1,5 @@
-BootStrap: docker
-FROM: quay.io/repository/fenicsproject/dolfinx
+Bootstrap: docker
+From: quay.io/repository/fenicsproject/dolfinx
 
 
 %post
