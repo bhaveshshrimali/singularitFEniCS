@@ -9,4 +9,4 @@ Stable container for [FEniCS 2019.1.0](https://fenicsproject.org/download/) with
 
 ## singularityMixedFEniCS.recipe (stable and working)
    * Status: working
-   * A docker layer with C\'{e}cile Daversin's [mixed-dimensional](https://bitbucket.org/fenics-project/dolfin/src/027d9cc4c80adc7d8e9080fb3cc15714ff1ca910/?at=cecile%2Fmixed-dimensional) branch and Netgen installed. 
+   * A docker layer with C\'ecile Daversin's [mixed-dimensional](https://bitbucket.org/fenics-project/dolfin/src/027d9cc4c80adc7d8e9080fb3cc15714ff1ca910/?at=cecile%2Fmixed-dimensional) branch and Netgen installed. 
