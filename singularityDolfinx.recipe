@@ -10,6 +10,7 @@ From: dolfinx/real:latest
     python3 -m pip install lxml
     apt-get -y update
     git clone https://github.com/jorgensd/dolfinx_mpc.git 
+    cd dolfinx_mpc
     rm -rf build
     mkdir -p build
     cd build
