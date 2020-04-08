@@ -15,6 +15,7 @@ From: dolfinx/real:latest
     mkdir -p build
     cd build
     export PETSC_DIR=/usr/local/petsc
+    export SLEPC_DIR=/usr/local/slepc
     cmake -G Ninja -DCMAKE_BUILD_TYPE=Developer ../cpp/
     ninja -j3 install
     cd ../python
