@@ -9,6 +9,14 @@ From: dolfinx/real:latest
     python3 -m pip install meshio 
     python3 -m pip install lxml
     apt-get -y update
+    git clone https://github.com/jorgensd/dolfinx_mpc.git 
+    rm -rf build
+    mkdir -p build
+    cd build
+    cmake -G Ninja -DCMAKE_BUILD_TYPE=Developer ../cpp/
+    ninja -j3 install
+    cd ../python
+    python3 -m pip install . --upgrade
     ldconfig
 
 %runscript
