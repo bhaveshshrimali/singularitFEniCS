@@ -9,6 +9,7 @@ From: dolfinx/real:latest
     apt-get -y install libpython3-dev libxmu-dev tk-dev tcl-dev cmake git g++ libglu1-mesa-dev liblapacke-dev
     export BASEDIR=~/ngsuite
     mkdir -p $BASEDIR
+    chmod a+rx $BASEDIR
     cd $BASEDIR && git clone https://github.com/NGSolve/ngsolve.git ngsolve-src
     cd $BASEDIR/ngsolve-src && git submodule update --init --recursive
     mkdir -p $BASEDIR/ngsolve-build
