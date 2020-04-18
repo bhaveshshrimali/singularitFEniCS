@@ -8,7 +8,7 @@ From: ceciledc/fenics_mixed_dimensional:latest
     apt-get -y install python3-lxml
     python3 -m pip install numpy scipy matplotlib pandas ffmpeg-python openpyxl
     apt-get -y update 
-    python3 -m pip install meshio pygmsh lxm
+    python3 -m pip install meshio pygmsh lxml
     apt-add-repository universe
     add-apt-repository ppa:ngsolve/ngsolve
     apt-get -y update
