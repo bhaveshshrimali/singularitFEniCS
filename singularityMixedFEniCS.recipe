@@ -19,7 +19,7 @@ From: ceciledc/fenics_mixed_dimensional:latest
     python3 -m pip install --user git+https://github.com/blechta/tsfc.git@2018.1.0
     python3 -m pip install --user git+https://github.com/blechta/COFFEE.git@2018.1.0
     python3 -m pip install --user git+https://github.com/blechta/FInAT.git@2018.1.0
-    pip3 install singledispatch networkx pulp
+    python3 -m pip install --user singledispatch networkx pulp
     apt-get -y update 
     python3 -m pip install meshio pygmsh lxml pyamg
     apt-add-repository universe
