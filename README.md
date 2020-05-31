@@ -14,3 +14,7 @@ Stable container for [FEniCS 2019.1.0](https://fenicsproject.org/download/) with
 ## singularityMultiphenics.recipe (stable and working)
    * Status: working
    * A similar layer as above save that this one builds on top of Francesco Ballrain's [multiphenics](https://gitlab.com/multiphenics/multiphenics) library.
+
+## fenics.recipe (testing)
+   * Status: experimental
+   * Contains the development version of dolfin with `NetGEN/NGSolve` along with `Gmsh-SDK`
