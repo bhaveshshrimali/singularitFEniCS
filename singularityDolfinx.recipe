@@ -20,6 +20,10 @@ From: dolfinx/dolfinx:latest
     ninja -j3 install
     cd ../python
     python3 -m pip install . --upgrade
+    apt-add-repository universe
+    add-apt-repository ppa:ngsolve/ngsolve
+    apt-get -y update
+    apt-get -y install ngsolve
     ldconfig
 
 %runscript
