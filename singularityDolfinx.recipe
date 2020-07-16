@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: dolfinx/real:latest
+From: dolfinx/dolfinx:latest
 
 %post
     apt-get -y update
