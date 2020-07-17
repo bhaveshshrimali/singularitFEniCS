@@ -8,18 +8,6 @@ From: dolfinx/dolfinx:latest
     apt-get -y install python3-lxml
     python3 -m pip install numpy scipy matplotlib pandas ffmpeg-python openpyxl vedo
     python3 -m pip install meshio lxml pygmsh pyamg jupyter notebook ipython
-    // git clone https://github.com/jorgensd/dolfinx_mpc.git 
-    // cd dolfinx_mpc
-    // rm -rf build
-    // mkdir -p build
-    // cd build
-    // export PETSC_DIR=/usr/local/petsc
-    // export SLEPC_DIR=/usr/local/slepc
-    // cmake -G Ninja -DCMAKE_BUILD_TYPE=Developer ../cpp/
-    // ninja -j3 install
-    // cd ../python
-    // python3 -m pip install . --upgrade
-    // ldconfig
-
+    
 %runscript
     exec /bin/bash -i
