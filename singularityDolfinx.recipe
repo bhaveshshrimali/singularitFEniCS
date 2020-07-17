@@ -8,10 +8,6 @@ From: dolfinx/dolfinx:latest
     apt-get -y install python3-lxml nano
     python3 -m pip install numpy scipy matplotlib pandas ffmpeg-python openpyxl vedo
     python3 -m pip install meshio lxml pygmsh pyamg jupyter notebook ipython
-    apt-get -y update
-    apt-add-repository universe
-    add-apt-repository ppa:ngsolve/ngsolve
-    apt-get -y install ngsolve
     git clone https://github.com/jorgensd/dolfinx_mpc.git 
     cd dolfinx_mpc
     rm -rf build
