@@ -9,7 +9,7 @@ From: bhaveshshrimali/dolfin_superlu:latest
     apt-get -y install libsuitesparse-dev libcgal-dev libeigen3-dev libxmu-dev tk-dev tcl-dev cmake git g++ libglu1-mesa-dev liblapacke-dev
     apt-get -y update
     cd /usr/local
-    apt-get -y install python3-lxml dvipng texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-science cm-super 
+    apt-get -y install python3-lxml dvipng texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-science cm-super swig
     python3 -m pip install --force-reinstall numpy scipy matplotlib pandas ffmpeg-python openpyxl cython scikit-fem numba
     apt-get -y update
     python3 -m pip install meshio pygmsh lxml pyamg jax jaxlib scikit-umfpack pymumps opt_einsum
