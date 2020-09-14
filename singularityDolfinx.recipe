@@ -8,6 +8,8 @@ From: dolfinx/dolfinx
     apt-get -y install python3-lxml
     python3 -m pip install numpy scipy matplotlib pandas ffmpeg-python openpyxl vedo
     python3 -m pip install lxml pyamg
+    export PATH=PETSC_DIR=/usr/local/petsc:$PATH
+    export PATH=SLEPC_DIR=/usr/local/slepc:$PATH
     git clone https://github.com/jorgensd/dolfinx_mpc.git
     cd dolfinx_mpc
     rm -rf build
@@ -18,4 +20,4 @@ From: dolfinx/dolfinx
     cd ../python
     pip3 install . --upgrade
 %runscript
-    exec /bin/bash -i
+    exec /bin/bash -i   
