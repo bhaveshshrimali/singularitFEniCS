@@ -5,8 +5,8 @@ From: dolfinx/dolfinx
     apt-get -y update
     apt-get -y install software-properties-common ffmpeg curl build-essential python3-tk
     cd ~
-    export PETSC_DIR=/usr/local/petsc
     git clone https://github.com/jorgensd/dolfinx_mpc.git
+    PETSC_DIR=/usr/local/petsc
     cd dolfinx_mpc
     rm -rf build
     mkdir -p build
