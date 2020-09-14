@@ -8,6 +8,7 @@ From: dolfinx/dolfinx
     apt-get -y install python3-lxml
     python3 -m pip install numpy scipy matplotlib pandas ffmpeg-python openpyxl vedo
     python3 -m pip install lxml pyamg
+    git clone https://github.com/jorgensd/dolfinx_mpc.git
     cd dolfinx_mpc
     rm -rf build
     mkdir -p build
