@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: dolfinx/dolfinx:latest
+From: dolfinx/dolfinx
 
 %post
     apt-get -y update
@@ -8,8 +8,6 @@ From: dolfinx/dolfinx:latest
     apt-get -y install python3-lxml
     python3 -m pip install numpy scipy matplotlib pandas ffmpeg-python openpyxl vedo
     python3 -m pip install lxml pyamg
-    apt-get -y update
-    git clone https://github.com/jorgensd/dolfinx_mpc.git
     cd dolfinx_mpc
     rm -rf build
     mkdir -p build
@@ -18,6 +16,5 @@ From: dolfinx/dolfinx:latest
     ninja -j3 install
     cd ../python
     pip3 install . --upgrade
-    
 %runscript
     exec /bin/bash -i
