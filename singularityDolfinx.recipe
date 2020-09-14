@@ -7,9 +7,10 @@ From: dolfinx/dolfinx:latest
     apt-get -y install software-properties-common ffmpeg curl build-essential python3 python3-pip python3-tk
     apt-get -y install python3-lxml
     python3 -m pip install numpy scipy matplotlib pandas ffmpeg-python openpyxl vedo
-    python3 -m pip install meshio lxml pygmsh pyamg jupyter notebook ipython
+    python3 -m pip install lxml pyamg
     apt-get -y update
     git clone https://github.com/jorgensd/dolfinx_mpc.git
+    cd dolfinx_mpc
     rm -rf build
     mkdir -p build
     cd build
