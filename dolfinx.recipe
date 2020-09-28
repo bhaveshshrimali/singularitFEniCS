@@ -1,46 +1,14 @@
 Bootstrap: docker
-From: dolfinx/real:latest
+From: bhaveshshrimali/dolfinsuperlu:latest
 
 %post
     apt-get -y update
-    apt-get -y install libcgal-dev libeigen3-dev
-    apt-get -y install software-properties-common ffmpeg curl build-essential python3 python3-pip python3-tk
-    apt-get -y install python3-lxml
-    apt-get -y install libpython3-dev libxmu-dev tk-dev tcl-dev cmake git g++ libglu1-mesa-dev liblapacke-dev
-    export BASEDIR=/home
-    mkdir -p $BASEDIR
-    cd $BASEDIR && git clone https://github.com/NGSolve/ngsolve.git ngsolve-src
-    chmod -R 777 $BASEDIR
-    cd $BASEDIR/ngsolve-src && git submodule update --init --recursive
-    mkdir -p $BASEDIR/ngsolve-build
-    mkdir -p $BASEDIR/ngsolve-install
-    cd $BASEDIR/ngsolve-build
-    cmake -DCMAKE_INSTALL_PREFIX=${BASEDIR}/ngsolve-install ${BASEDIR}/ngsolve-src
-
-    make -j4
-    make install
-    echo "export NETGENDIR=${BASEDIR}/ngsolve-install/bin" >> ~/.bashrc
-    echo "export PATH=\$NETGENDIR:\$PATH" >> ~/.bashrc
-    export PYTHONPATH_TMP=`python3 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1,0,''))"`
-    echo "export PYTHONPATH=\$NETGENDIR/../${PYTHONPATH_TMP}:\$PATH" >> ~/.bashrc
-    source ~/.bashrc
-    cd ${BASEDIR}/ngsolve-install/share/ngsolve/py_tutorials/intro
-    
-    cd ~
-    python3 -m pip install numpy scipy matplotlib pandas ffmpeg-python openpyxl
-    python3 -m pip install meshio lxml pygalmesh
-
-    git clone https://github.com/jorgensd/dolfinx_mpc.git 
-    cd dolfinx_mpc
-    rm -rf build
-    mkdir -p build
-    cd build
-    export PETSC_DIR=/usr/local/petsc
-    export SLEPC_DIR=/usr/local/slepc
-    cmake -G Ninja -DCMAKE_BUILD_TYPE=Developer ../cpp/
-    ninja -j3 install
-    cd ../python
-    python3 -m pip install . --upgrade
+    apt-get -y install software-properties-common ffmpeg curl wget build-essential
+    apt-get -y update
+    apt-get -y install python3-lxml dvipng texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-science cm-super
+    git clone https://bitbucket.org/nate-sime/dolfin_dg.git
+    cd dolfin_dg
+    python3 setup.py install
     ldconfig
 
 %runscript
