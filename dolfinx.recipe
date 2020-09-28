@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: bhaveshshrimali/dolfinsuperlu:latest
+From: bhaveshshrimali/dolfin_superlu:latest
 
 %post
     apt-get -y update
