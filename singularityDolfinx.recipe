@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: bhaveshshrimali/dolfinxmpc
+From: bhaveshshrimali/dolfinxmpc:new
 
 %post
     apt-get -y update
